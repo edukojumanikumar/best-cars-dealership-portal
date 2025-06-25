@@ -1,68 +1,110 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <title>About Us - Best Cars</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; height: 1.2in;">
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-bold fs-2 text-dark" href="/">Dealerships</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
         <span class="navbar-toggler-icon"></span>
       </button>
+  
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-row">
+            <li class="nav-item ms-3">
+                <a class="nav-link text-black fw-semibold" style="font-size: larger;" href="/">Home</a>
+              </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link active text-black fw-semibold" style="font-size: larger;" href="/about">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+          <li class="nav-item ms-3">
+            <a class="nav-link text-black fw-semibold" style="font-size: larger;" href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
+<!-- Banner Header -->
+<div class="bg-light py-5 text-center">
+    <h1 class="display-3 fw-bold">About Us</h1>
+    <p class="lead mt-3 w-75 mx-auto">
+        Welcome to <strong>Best Cars</strong> — your trusted destination for premium vehicles across North America.
+        We specialize in offering a wide range of domestic and imported cars to suit every lifestyle and budget.
+    </p>
 </div>
 
+<!-- Main Content -->
+<div class="container mt-4">
+    <div class="card p-4 shadow-sm">
+        <p>
+            Our mission is to make car ownership simple, transparent, and rewarding. Whether you're a first-time buyer or a seasoned driver,
+            our expert team is committed to helping you find the right vehicle with ease and confidence.
+        </p>
+        <p>
+            In addition to our extensive inventory, we provide a seamless platform for viewing dealership ratings and customer reviews,
+            enabling informed decisions and building lasting trust with our community.
+        </p>
+
+        <!-- Team Section -->
+        <h2 class="text-center mt-5 mb-4">Meet Our Team</h2>
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img class="card-img-top rounded-circle p-3" src="/static/person.png" alt="Emily Carson">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Carson</h5>
+                        <p class="text-muted">Sales Manager</p>
+                        <p class="card-text">Oversees sales operations and ensures a seamless customer experience across all branches.</p>
+                        <p>emily@bestcars.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img class="card-img-top rounded-circle p-3" src="/static/person.png" alt="James Lee">
+                    <div class="card-body">
+                        <h5 class="card-title">James Lee</h5>
+                        <p class="text-muted">Technical Lead</p>
+                        <p class="card-text">Heads vehicle inspection and quality assurance across our dealership network.</p>
+                        <p>james@bestcars.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img class="card-img-top rounded-circle p-3" src="/static/person.png" alt="Sophia Patel">
+                    <div class="card-body">
+                        <h5 class="card-title">Sophia Patel</h5>
+                        <p class="text-muted">Customer Experience</p>
+                        <p class="card-text">Champions customer satisfaction by improving feedback systems and dealer transparency.</p>
+                        <p>sophia@bestcars.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 py-4 bg-dark text-white">
+    <div class="container">
+        <p class="mb-1">&copy; 2025 Best Cars Dealership. All rights reserved.</p>
+        <small>Designed by Mani Kumar</small>
+    </div>
+</footer>
+
+</body>
 </html>
