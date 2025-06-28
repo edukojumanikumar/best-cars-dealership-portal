@@ -16,7 +16,10 @@ def get_cars(request):
     car_models = CarModel.objects.select_related("car_make")
     cars = []
     for car_model in car_models:
-        cars.append({"CarModel": car_model.name, "CarMake": car_model.car_make.name})
+        cars.append({
+            "CarModel": car_model.name,
+            "CarMake": car_model.car_make.name
+        })
     return JsonResponse({"CarModels": cars})
 
 
@@ -29,7 +32,10 @@ def login_user(request):
     data = {"userName": username}
     if user is not None:
         login(request, user)
-        data = {"userName": username, "status": "Authenticated"}
+        data = {
+            "userName": username,
+            "status": "Authenticated"
+        }
     return JsonResponse(data)
 
 
@@ -63,9 +69,15 @@ def registration(request):
             email=email,
         )
         login(request, user)
-        return JsonResponse({"userName": username, "status": "Authenticated"})
+        return JsonResponse({
+            "userName": username,
+            "status": "Authenticated"
+        })
     else:
-        return JsonResponse({"userName": username, "error": "Already Registered"})
+        return JsonResponse({
+            "userName": username,
+            "error": "Already Registered"
+        })
 
 
 def get_dealerships(request, state="All"):
@@ -74,7 +86,10 @@ def get_dealerships(request, state="All"):
     else:
         endpoint = "/fetchDealers/" + state
     dealerships = get_request(endpoint)
-    return JsonResponse({"status": 200, "dealers": dealerships})
+    return JsonResponse({
+        "status": 200,
+        "dealers": dealerships
+    })
 
 
 def get_dealer_reviews(request, dealer_id):
@@ -87,9 +102,15 @@ def get_dealer_reviews(request, dealer_id):
                 review_detail["sentiment"] = response["sentiment"]
             else:
                 review_detail["sentiment"] = "neutral"
-        return JsonResponse({"status": 200, "reviews": reviews})
+        return JsonResponse({
+            "status": 200,
+            "reviews": reviews
+        })
     else:
-        return JsonResponse({"status": 400, "message": "Bad Request"})
+        return JsonResponse({
+            "status": 400,
+            "message": "Bad Request"
+        })
 
 
 def get_dealer_details(request, dealer_id):
@@ -98,11 +119,20 @@ def get_dealer_details(request, dealer_id):
         dealership_list = get_request(endpoint)
         if dealership_list and len(dealership_list) > 0:
             dealership = dealership_list[0]
-            return JsonResponse({"status": 200, "dealer": dealership})
+            return JsonResponse({
+                "status": 200,
+                "dealer": dealership
+            })
         else:
-            return JsonResponse({"status": 404, "message": "Dealer not found"})
+            return JsonResponse({
+                "status": 404,
+                "message": "Dealer not found"
+            })
     else:
-        return JsonResponse({"status": 400, "message": "Bad Request"})
+        return JsonResponse({
+            "status": 400,
+            "message": "Bad Request"
+        })
 
 
 @csrf_exempt
@@ -113,6 +143,12 @@ def add_review(request):
             post_review(data)
             return JsonResponse({"status": 200})
         except Exception:
-            return JsonResponse({"status": 401, "message": "Error in posting review"})
+            return JsonResponse({
+                "status": 401,
+                "message": "Error in posting review"
+            })
     else:
-        return JsonResponse({"status": 403, "message": "Unauthorized"})
+        return JsonResponse({
+            "status": 403,
+            "message": "Unauthorized"
+        })
