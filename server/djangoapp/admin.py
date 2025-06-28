@@ -23,9 +23,9 @@ class CarModelInline(admin.TabularInline):
 
 # This defines how CarModel appears in admin separately (optional)
 class CarModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'car_make', 'type', 'year']
-    list_filter = ['car_make', 'type', 'year']
-    search_fields = ['name', 'car_make__name']
+    list_display = ["name", "car_make", "type", "year"]
+    list_filter = ["car_make", "type", "year"]
+    search_fields = ["name", "car_make__name"]
 
 
 # This defines how CarMake appears in admin, with CarModels inline
