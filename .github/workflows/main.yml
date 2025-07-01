@@ -54,6 +54,5 @@ jobs:
 
       - name: Run Linter
         run: |
-          # Only lint server-side JS files (skip frontend React)
-          find ./server/database -name "*.js" -exec jshint {} +
-          echo "✅ Linted backend JS files successfully"
+          jshint .
+          echo "✅ Linted all the JavaScript files successfully"
