@@ -100,14 +100,12 @@ This project is a full stack car dealership portal showcasing end-to-end applica
 
 
 
- 📝 Screenshots & Demo
-
+ 📝 Screenshots & Demo: [Best cars dealership portal](BestCarsDealershipPortal.docx)
 
 
  📌 Repository Links
 
 * GitHub: [best-cars-dealership-portal](https://github.com/edukojumanikumar/best-cars-dealership-portal)
-* Deployed URL: *(Add your live link here)*
 
 
 
