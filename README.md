@@ -100,7 +100,7 @@ This project is a full stack car dealership portal showcasing end-to-end applica
 
 
 
- 📝 Screenshots & Demo: [Best cars dealership portal](BestCarsDealershipPortal.docx)
+ 📝 Screenshots & Demo: [Best cars dealership portal](BestCarsDealershipPortal.pdf)
 
 
  📌 Repository Links
